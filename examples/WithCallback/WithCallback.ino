@@ -22,9 +22,11 @@ PushButton btn(BUTTON_PIN);
 
 void setup() {
     Serial.begin(9600);
+
     pinMode(BUTTON_PIN, INPUT_PULLUP);
     pinMode(LED_PIN, OUTPUT);
     digitalWrite(LED_PIN, LOW);
+
     btn.onPress(pressed);
     btn.onRelease(released);
     btn.onChange(changed);
